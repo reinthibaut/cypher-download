@@ -1,0 +1,4 @@
+# The installer is uploaded as a GitHub Release asset, never committed.
+# An 80 MB binary in git history would be permanent and would bloat every clone.
+*.exe
+*.blockmap

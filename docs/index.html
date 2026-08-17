@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cypher App — Download</title>
+<meta name="description" content="Download Cypher App for Windows — encrypt and decrypt messages with a personal cipher.">
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --border: #e2e5ee;
+    --text: #171a21;
+    --muted: #5c6376;
+    --accent: #4f46e5;
+    --accent-text: #ffffff;
+    --warn-bg: #fff8e6;
+    --warn-border: #f0d69a;
+    --warn-text: #6b5316;
+    --code-bg: #eef0f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1016;
+      --surface: #171a22;
+      --border: #2a2f3c;
+      --text: #eceef4;
+      --muted: #9aa2b6;
+      --accent: #7c74f5;
+      --accent-text: #0e1016;
+      --warn-bg: #2a2313;
+      --warn-border: #4d411f;
+      --warn-text: #e8d5a3;
+      --code-bg: #21252f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+
+  header { text-align: center; margin-bottom: 44px; }
+  .mark {
+    width: 64px; height: 64px; margin: 0 auto 20px;
+    border-radius: 16px; background: var(--accent);
+    display: grid; place-items: center;
+    font-size: 30px; font-weight: 700; color: var(--accent-text);
+    letter-spacing: -1px;
+  }
+  h1 { font-size: 2.1rem; margin: 0 0 10px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); font-size: 1.08rem; margin: 0; }
+
+  .cta { text-align: center; margin-bottom: 16px; }
+  .btn {
+    display: inline-block; background: var(--accent); color: var(--accent-text);
+    text-decoration: none; font-weight: 600; font-size: 1.05rem;
+    padding: 15px 34px; border-radius: 11px;
+    transition: transform .12s ease, opacity .12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); opacity: .92; }
+  .meta { color: var(--muted); font-size: .88rem; margin-top: 12px; }
+
+  section {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px 28px; margin-top: 22px;
+  }
+  h2 { font-size: 1.2rem; margin: 0 0 14px; letter-spacing: -0.01em; }
+  p { margin: 0 0 14px; }
+  p:last-child, ol:last-child, ul:last-child { margin-bottom: 0; }
+
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 9px; }
+  li:last-child { margin-bottom: 0; }
+
+  .quote {
+    background: var(--code-bg); border-radius: 9px;
+    padding: 13px 16px; margin: 10px 0;
+    font-size: .93rem; color: var(--muted);
+  }
+  .quote strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+  .notice {
+    background: var(--warn-bg); border: 1px solid var(--warn-border);
+    color: var(--warn-text); border-radius: 11px;
+    padding: 18px 22px; margin-top: 22px; font-size: .95rem;
+  }
+  .notice h2 { color: var(--warn-text); }
+
+  kbd {
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: 5px; padding: 1px 7px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .87em; color: var(--text);
+  }
+
+  footer {
+    text-align: center; color: var(--muted);
+    font-size: .85rem; margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">C</div>
+    <h1>Cypher App</h1>
+    <p class="tagline">Write secret messages that only the people with your key can read.</p>
+  </header>
+
+  <div class="cta">
+    <a class="btn" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe">
+      Download for Windows
+    </a>
+    <div class="meta">Version 1.1.0 &middot; about 80 MB &middot; Windows 10 and 11 (64-bit)</div>
+  </div>
+
+  <div class="notice">
+    <h2>Windows will show a warning. That's expected.</h2>
+    <p>
+      When you open the file, Windows shows a blue box saying it doesn't recognise the app.
+      This happens to every program that hasn't been registered with Microsoft, which costs
+      money and is not worth it for a small app like this one. Here's how to get past it:
+    </p>
+    <div class="quote">
+      <strong>Windows protected your PC</strong>
+      Microsoft Defender SmartScreen prevented an unrecognised app from starting.
+    </div>
+    <ol>
+      <li>Click <kbd>More info</kbd> — it's the small grey text in that blue box.</li>
+      <li>A new button appears at the bottom. Click <kbd>Run anyway</kbd>.</li>
+      <li>The normal installer opens. Click through it as usual.</li>
+    </ol>
+    <p style="margin-top:14px">
+      If you'd rather not, that's completely fine — just ask Rein to install it for you.
+    </p>
+  </div>
+
+  <section>
+    <h2>You'll also need a key</h2>
+    <p>
+      The app on its own can't read anything. A <strong>key</strong> is the shared secret that
+      makes your messages match up — think of it as the codebook. Two people can only read each
+      other's messages if they have the exact same key.
+    </p>
+    <p>Rein will send you a small <code>.json</code> key file. To load it:</p>
+    <ol>
+      <li>Save the file somewhere you'll find it again, like your Downloads folder.</li>
+      <li>Open Cypher App and click the <strong>Key</strong> tab at the top.</li>
+      <li>Click <strong>Import Key from File</strong> and pick the file you saved.</li>
+    </ol>
+    <p>That's it — you can now encrypt and decrypt messages with whoever shares that key.</p>
+  </section>
+
+  <section>
+    <h2>Is this safe to install?</h2>
+    <p>
+      It's a personal project written by Rein, not a commercial product. It runs entirely on
+      your own computer: nothing you type is uploaded, and there is no account, no sign-up,
+      and no internet connection required to use it.
+    </p>
+    <p>
+      Your keys and messages are stored only on your own machine, in your private Windows
+      user folder.
+    </p>
+  </section>
+
+  <section>
+    <h2>Uninstalling</h2>
+    <p>
+      Open Windows <strong>Settings</strong> → <strong>Apps</strong> → find
+      <strong>Cypher App</strong> → <strong>Uninstall</strong>. It removes cleanly, the same
+      way any other program does.
+    </p>
+  </section>
+
+  <footer>
+    Made by Rein Thibaut
+  </footer>
+
+</div>
+</body>
+</html>
