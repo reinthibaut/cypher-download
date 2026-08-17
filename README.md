@@ -5,8 +5,9 @@ Write secret messages that only the people with your key can read.
 **→ [Download page](https://reinthibaut.github.io/cypher-download/)**
 
 Or grab the installer directly:
-**[CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe)**
-(version 1.1.0, ~80 MB, Windows 10 and 11, 64-bit)
+
+- **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit)
+- **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, works on Apple Silicon and Intel)
 
 ## Windows will show a warning — that's expected
 
@@ -23,6 +24,26 @@ and isn't worth it for a small app like this one. To continue:
 3. The normal installer opens; click through it as usual
 
 If you'd rather not, just ask Rein to install it for you.
+
+## On a Mac, it takes a few more steps
+
+Apple blocks apps that aren't registered with them, and won't let you click straight
+through like Windows does.
+
+1. Open the `.dmg` and drag **Cypher App** into **Applications**
+2. Open **Applications** and double-click **Cypher App** — macOS will refuse:
+   > **"Cypher App" Not Opened** — Apple could not verify "Cypher App" is free of malware
+   > that may harm your Mac or compromise your privacy.
+3. Click **Done**. It has to be refused once before Apple lets you allow it.
+4. Open **System Settings** → **Privacy & Security**
+5. Scroll to the bottom, to **Security**. Click **Open Anyway** next to "Cypher App was
+   blocked to protect your Mac."
+6. Enter your Mac password, then click **Open Anyway** again
+
+You only do this once. After that it opens like any other app.
+
+**On macOS Sonoma and earlier** it's quicker: right-click the app → **Open** → **Open**.
+Apple removed that shortcut in newer versions.
 
 ## You'll also need a key
 

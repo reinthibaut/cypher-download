@@ -57,15 +57,20 @@
   h1 { font-size: 2.1rem; margin: 0 0 10px; letter-spacing: -0.02em; }
   .tagline { color: var(--muted); font-size: 1.08rem; margin: 0; }
 
-  .cta { text-align: center; margin-bottom: 16px; }
+  .cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .dl { flex: 1 1 260px; max-width: 320px; text-align: center; }
   .btn {
-    display: inline-block; background: var(--accent); color: var(--accent-text);
+    display: block; background: var(--accent); color: var(--accent-text);
     text-decoration: none; font-weight: 600; font-size: 1.05rem;
-    padding: 15px 34px; border-radius: 11px;
+    padding: 15px 24px; border-radius: 11px;
     transition: transform .12s ease, opacity .12s ease;
   }
+  .btn.secondary {
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border);
+  }
   .btn:hover { transform: translateY(-1px); opacity: .92; }
-  .meta { color: var(--muted); font-size: .88rem; margin-top: 12px; }
+  .meta { color: var(--muted); font-size: .88rem; margin-top: 10px; }
 
   section {
     background: var(--surface); border: 1px solid var(--border);
@@ -116,10 +121,18 @@
   </header>
 
   <div class="cta">
-    <a class="btn" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe">
-      Download for Windows
-    </a>
-    <div class="meta">Version 1.1.0 &middot; about 80 MB &middot; Windows 10 and 11 (64-bit)</div>
+    <div class="dl">
+      <a class="btn" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe">
+        Download for Windows
+      </a>
+      <div class="meta">Version 1.1.0 &middot; about 80 MB<br>Windows 10 and 11 (64-bit)</div>
+    </div>
+    <div class="dl">
+      <a class="btn secondary" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg">
+        Download for Mac
+      </a>
+      <div class="meta">Version 1.1.0 &middot; about 170 MB<br>macOS 11 and later, any Mac</div>
+    </div>
   </div>
 
   <div class="notice">
@@ -140,6 +153,43 @@
     </ol>
     <p style="margin-top:14px">
       If you'd rather not, that's completely fine — just ask Rein to install it for you.
+    </p>
+  </div>
+
+  <div class="notice">
+    <h2>On a Mac, it takes a few more steps</h2>
+    <p>
+      Apple blocks apps that haven't been registered with them, and unlike Windows it
+      won't let you click straight through. It's not difficult, just fiddly — here's
+      the whole thing:
+    </p>
+    <ol>
+      <li>Open the downloaded <code>.dmg</code> file and drag <strong>Cypher App</strong>
+          into your <strong>Applications</strong> folder.</li>
+      <li>Open <strong>Applications</strong> and double-click <strong>Cypher App</strong>.
+          macOS will refuse and show this:</li>
+    </ol>
+    <div class="quote">
+      <strong>&ldquo;Cypher App&rdquo; Not Opened</strong>
+      Apple could not verify &ldquo;Cypher App&rdquo; is free of malware that may harm
+      your Mac or compromise your privacy.
+    </div>
+    <ol start="3">
+      <li>Click <kbd>Done</kbd>. This step is expected — it has to be refused once before
+          Apple will let you allow it.</li>
+      <li>Open <strong>System Settings</strong> → <strong>Privacy &amp; Security</strong>.</li>
+      <li>Scroll all the way down to the <strong>Security</strong> section. You'll see
+          &ldquo;Cypher App was blocked to protect your Mac.&rdquo; Click
+          <kbd>Open Anyway</kbd>.</li>
+      <li>Enter your Mac password, then click <kbd>Open Anyway</kbd> once more.</li>
+    </ol>
+    <p style="margin-top:14px">
+      You only do this once. After that it opens normally, like any other app.
+    </p>
+    <p>
+      <strong>On older Macs</strong> (macOS Sonoma and earlier) it's quicker: right-click
+      the app, choose <kbd>Open</kbd>, then <kbd>Open</kbd> again. Apple removed that
+      shortcut in newer versions.
     </p>
   </div>
 

@@ -14,22 +14,30 @@ This repo holds only the install page and the released installer.
 ## Where things live
 - Public repo: `github.com/reinthibaut/cypher-download`
 - Live page: `reinthibaut.github.io/cypher-download`
-- Installer: attached to the GitHub Release in this repo, named `CypherApp-Setup.exe`
+- Installers: attached to the GitHub Release in this repo
+  - Windows: `CypherApp-Setup.exe`
+  - macOS: `CypherApp.dmg` (universal — runs on both Apple Silicon and Intel)
 - Private source: `github.com/reinthibaut/Reins-Cypher`
 
 ## Rules
 - **This repo is public.** Never put keys, personal data, `.env` files, or app source here.
-- The release asset must always be named `CypherApp-Setup.exe` — the download button links
-  to `/releases/latest/download/CypherApp-Setup.exe`, which only resolves if the filename
-  stays identical across versions. Renaming it silently breaks the download button.
+- Release assets must always be named `CypherApp-Setup.exe` and `CypherApp.dmg` — the
+  download buttons link to `/releases/latest/download/<name>`, which only resolves if the
+  filenames stay identical across versions. electron-builder produces versioned names like
+  `Cypher App-1.1.0-universal.dmg`, so they must be renamed before uploading. Getting this
+  wrong breaks the download button silently — the page still looks fine.
 - GitHub Pages serves from the `docs/` folder on `main`. Changing that folder breaks the site.
 - Never run git commands without asking Rein first.
 - Never delete files without confirming.
 
 ## Publishing a new version
-1. Build in the private repo: `npm run dist`
-2. Copy `dist/Cypher App Setup <version>.exe` and rename it to `CypherApp-Setup.exe`
-3. Create a release here with that file attached
+1. **Windows**: in the private repo run `npm run dist`, then rename
+   `dist/Cypher App Setup <version>.exe` to `CypherApp-Setup.exe`
+2. **macOS**: trigger the "Build macOS" workflow in the private repo
+   (`gh workflow run build-mac.yml --repo reinthibaut/Reins-Cypher`), download the
+   artifact, then rename `Cypher App-<version>-universal.dmg` to `CypherApp.dmg`.
+   The Mac build cannot run on Windows — it needs a GitHub-hosted Mac.
+3. Create a release here with both files attached
 4. Update the version number shown in `docs/index.html` and `README.md`
 
 ## Stack
