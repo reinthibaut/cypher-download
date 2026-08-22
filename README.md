@@ -65,7 +65,19 @@ Your keys and messages are stored only on your own machine.
 
 ## Uninstalling
 
-Windows **Settings** → **Apps** → **Cypher App** → **Uninstall**.
+**Windows** — **Settings** → **Apps** → **Cypher App** → **Uninstall**.
+
+**Mac** — open **Applications**, drag **Cypher App** to the Bin, empty the Bin. Macs have no
+uninstaller; dragging it away is the normal way to remove an app.
+
+Either way your keys are **not** deleted — they're kept separately, so reinstalling picks up
+where you left off. To wipe them too:
+
+- **Windows** — <kbd>Win</kbd>+<kbd>R</kbd>, paste `%APPDATA%\cypher-app`, Enter, delete the folder
+- **Mac** — in Finder press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd>, paste
+  `~/Library/Application Support/cypher-app`, Enter, drag the folder to the Bin
+
+That erases your keys permanently. Export any key you still need from the **Key** tab first.
 
 ---
 

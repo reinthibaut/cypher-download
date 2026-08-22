@@ -104,6 +104,12 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: .87em; color: var(--text);
   }
+  code {
+    background: var(--code-bg); border-radius: 5px; padding: 2px 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .87em; color: var(--text);
+    overflow-wrap: anywhere;
+  }
 
   footer {
     text-align: center; color: var(--muted);
@@ -225,9 +231,35 @@
   <section>
     <h2>Uninstalling</h2>
     <p>
-      Open Windows <strong>Settings</strong> → <strong>Apps</strong> → find
-      <strong>Cypher App</strong> → <strong>Uninstall</strong>. It removes cleanly, the same
-      way any other program does.
+      <strong>On Windows:</strong> open <strong>Settings</strong> → <strong>Apps</strong> →
+      find <strong>Cypher App</strong> → <strong>Uninstall</strong>. It removes cleanly, the
+      same way any other program does.
+    </p>
+    <p>
+      <strong>On Mac:</strong> open your <strong>Applications</strong> folder, drag
+      <strong>Cypher App</strong> to the Bin, then empty the Bin. Macs have no uninstaller —
+      dragging it away is the normal way to remove an app.
+    </p>
+
+    <p style="margin-top:18px">
+      Either way, <strong>your keys are not deleted</strong>. They're kept in a separate
+      folder, so if you reinstall later everything is still there. That's usually what you
+      want — but if you'd rather wipe them completely:
+    </p>
+    <ul>
+      <li>
+        <strong>Windows</strong> — press <kbd>Win</kbd> + <kbd>R</kbd>, paste
+        <code>%APPDATA%\cypher-app</code>, press Enter, then delete that folder.
+      </li>
+      <li>
+        <strong>Mac</strong> — in Finder press <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd>,
+        paste <code>~/Library/Application Support/cypher-app</code>, press Enter, then drag
+        that folder to the Bin.
+      </li>
+    </ul>
+    <p>
+      That erases your keys for good. If you might use the app again — or you're the only
+      person holding a particular key — export it from the <strong>Key</strong> tab first.
     </p>
   </section>
 
