@@ -4,10 +4,13 @@ Write secret messages that only the people with your key can read.
 
 **→ [Download page](https://reinthibaut.github.io/cypher-download/)**
 
+> **Version 2 is not compatible with version 1.** Messages written in one cannot be read by
+> the other, so everyone writing to each other has to update at the same time and use a new key.
+
 Or grab the installer directly:
 
-- **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit)
-- **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, works on Apple Silicon and Intel)
+- **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit) — version 2.0.0
+- **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, Apple Silicon and Intel) — version 2.0.0
 
 ## Windows will show a warning — that's expected
 
@@ -45,17 +48,23 @@ You only do this once. After that it opens like any other app.
 **On macOS Sonoma and earlier** it's quicker: right-click the app → **Open** → **Open**.
 Apple removed that shortcut in newer versions.
 
-## You'll also need a key
+## You'll also need a key and a password
 
-The app on its own can't read anything. A **key** is the shared secret that makes your
-messages match up — two people can only read each other's messages if they have the exact
-same key.
+The app on its own can't read anything. It needs two shared secrets, and both people must
+have exactly the same ones:
 
-Rein will send you a small `.json` key file. To load it:
+- **The key** — a small `.json` file, like a codebook. Rein sends you this once.
+- **The password** — a word or phrase you agree on together. It decides how the code
+  scrambles, so the same message with a different password comes out completely differently.
+
+To load the key file:
 
 1. Save the file somewhere you'll find it again
 2. Open Cypher App and click the **Key** tab at the top
 3. Click **Import Key from File** and pick the file you saved
+
+The password isn't stored anywhere — you type it in each time. **Never write the password
+inside the letter**, and don't send it in the same message as the key file.
 
 ## Is this safe?
 

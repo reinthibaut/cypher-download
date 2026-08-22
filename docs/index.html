@@ -131,14 +131,27 @@
       <a class="btn" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe">
         Download for Windows
       </a>
-      <div class="meta">Version 1.1.0 &middot; about 80 MB<br>Windows 10 and 11 (64-bit)</div>
+      <div class="meta">Version 2.0.0 &middot; about 80 MB<br>Windows 10 and 11 (64-bit)</div>
     </div>
     <div class="dl">
       <a class="btn secondary" href="https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg">
         Download for Mac
       </a>
-      <div class="meta">Version 1.1.0 &middot; about 170 MB<br>macOS 11 and later, any Mac</div>
+      <div class="meta">Version 2.0.0 &middot; about 170 MB<br>macOS 11 and later, any Mac</div>
     </div>
+  </div>
+
+  <div class="notice">
+    <h2>Already have version 1? Everyone has to update together.</h2>
+    <p>
+      Version 2 uses a different code system. Messages written in version 1 cannot be read
+      by version 2, and messages written in version 2 cannot be read by version 1 — so if
+      one person updates and another doesn't, they can no longer read each other.
+    </p>
+    <p>
+      Your existing keys are not deleted when you update, but they belong to the old system.
+      Rein will send you a new key when you're on version 2.
+    </p>
   </div>
 
   <div class="notice">
@@ -200,19 +213,33 @@
   </div>
 
   <section>
-    <h2>You'll also need a key</h2>
+    <h2>You'll also need a key and a password</h2>
     <p>
-      The app on its own can't read anything. A <strong>key</strong> is the shared secret that
-      makes your messages match up — think of it as the codebook. Two people can only read each
-      other's messages if they have the exact same key.
+      The app on its own can't read anything. It needs two shared secrets, and both people
+      must have exactly the same ones:
     </p>
-    <p>Rein will send you a small <code>.json</code> key file. To load it:</p>
+    <ul>
+      <li>
+        <strong>The key</strong> — a small <code>.json</code> file, like a codebook.
+        Rein sends you this once.
+      </li>
+      <li>
+        <strong>The password</strong> — a word or phrase you agree on together. It decides
+        how the code scrambles, so the same message with a different password comes out
+        completely differently.
+      </li>
+    </ul>
+    <p>To load the key file:</p>
     <ol>
       <li>Save the file somewhere you'll find it again, like your Downloads folder.</li>
       <li>Open Cypher App and click the <strong>Key</strong> tab at the top.</li>
       <li>Click <strong>Import Key from File</strong> and pick the file you saved.</li>
     </ol>
-    <p>That's it — you can now encrypt and decrypt messages with whoever shares that key.</p>
+    <p>
+      The password isn't stored anywhere — you type it in each time you write or read a
+      message. <strong>Never write the password inside the letter itself</strong>, and don't
+      send it in the same message as the key file.
+    </p>
   </section>
 
   <section>
