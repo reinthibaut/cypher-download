@@ -11,6 +11,12 @@ Or grab the installer directly:
 
 - **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit) — version 2.0.0
 - **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, Apple Silicon and Intel) — version 2.0.0
+- **Linux** — [CypherApp.AppImage](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.AppImage) (any distro, no install) or
+  [CypherApp.deb](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.deb) (Ubuntu, Mint, Debian)
+
+Linux has no SmartScreen or Gatekeeper equivalent, so there are no security warnings to click
+through. For the AppImage you may need to mark it executable first — `chmod +x CypherApp.AppImage`,
+or right-click → Properties → *Allow executing file as program*.
 
 ## Windows will show a warning — that's expected
 

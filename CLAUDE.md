@@ -17,15 +17,20 @@ This repo holds only the install page and the released installer.
 - Installers: attached to the GitHub Release in this repo
   - Windows: `CypherApp-Setup.exe`
   - macOS: `CypherApp.dmg` (universal — runs on both Apple Silicon and Intel)
+  - Linux: `CypherApp.AppImage` (any distro) and `CypherApp.deb` (Ubuntu/Mint/Debian)
 - Private source: `github.com/reinthibaut/Reins-Cypher`
 
 ## Rules
 - **This repo is public.** Never put keys, personal data, `.env` files, or app source here.
-- Release assets must always be named `CypherApp-Setup.exe` and `CypherApp.dmg` — the
-  download buttons link to `/releases/latest/download/<name>`, which only resolves if the
-  filenames stay identical across versions. electron-builder produces versioned names like
-  `Cypher App-1.1.0-universal.dmg`, so they must be renamed before uploading. Getting this
+- Release assets must always be named `CypherApp-Setup.exe`, `CypherApp.dmg`,
+  `CypherApp.AppImage` and `CypherApp.deb` — the download links point at
+  `/releases/latest/download/<name>`, which only resolves if the filenames stay identical
+  across versions. electron-builder produces versioned names like
+  `Cypher App-2.0.0-universal.dmg`, so they must be renamed before uploading. Getting this
   wrong breaks the download button silently — the page still looks fine.
+- The `.deb` maintainer email lives in `package.json` under `build.linux.maintainer` and is
+  readable by anyone who downloads the package, so it uses the GitHub noreply address rather
+  than a personal one. Building a `.deb` fails outright without it.
 - GitHub Pages serves from the `docs/` folder on `main`. Changing that folder breaks the site.
 - Never run git commands without asking Rein first.
 - Never delete files without confirming.
@@ -33,11 +38,16 @@ This repo holds only the install page and the released installer.
 ## Publishing a new version
 1. **Windows**: in the private repo run `npm run dist`, then rename
    `dist/Cypher App Setup <version>.exe` to `CypherApp-Setup.exe`
-2. **macOS**: trigger the "Build macOS" workflow in the private repo
-   (`gh workflow run build-mac.yml --repo reinthibaut/Reins-Cypher`), download the
-   artifact, then rename `Cypher App-<version>-universal.dmg` to `CypherApp.dmg`.
-   The Mac build cannot run on Windows — it needs a GitHub-hosted Mac.
-3. Create a release here with both files attached
+2. **macOS and Linux**: trigger the "Build installers" workflow in the private repo
+   (`gh workflow run build-installers.yml --repo reinthibaut/Reins-Cypher`), download
+   both artifacts, then rename:
+   - `Cypher App-<version>-universal.dmg` → `CypherApp.dmg`
+   - `Cypher App-<version>.AppImage` → `CypherApp.AppImage`
+   - `cypher-app_<version>_amd64.deb` → `CypherApp.deb`
+
+   Neither build can run on Windows — macOS packaging needs `hdiutil`, Linux needs
+   `dpkg`/`fakeroot`.
+3. Create a release here with all four files attached
 4. Update the version number shown in `docs/index.html` and `README.md`
 
 ## Stack
