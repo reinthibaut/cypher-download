@@ -4,13 +4,18 @@ Write secret messages that only the people with your key can read.
 
 **→ [Download page](https://reinthibaut.github.io/cypher-download/)**
 
+> **New in 2.1:** messages can keep their spaces (switch on the Encrypt and Decrypt screens,
+> both sides must match), and the code is harder to crack. Your 2.0 key keeps working. 2.0 can't
+> read 2.1 messages, so update together. Read old 2.0 messages by ticking
+> *Old message (made with v2.0)* on the Decrypt screen.
+
 > **Version 2 is not compatible with version 1.** Messages written in one cannot be read by
 > the other, so everyone writing to each other has to update at the same time and use a new key.
 
 Or grab the installer directly:
 
-- **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit) — version 2.0.0
-- **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, Apple Silicon and Intel) — version 2.0.0
+- **Windows** — [CypherApp-Setup.exe](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp-Setup.exe) (~80 MB, Windows 10 and 11, 64-bit) — version 2.1.0
+- **Mac** — [CypherApp.dmg](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.dmg) (~170 MB, macOS 11+, Apple Silicon and Intel) — version 2.1.0
 - **Linux** — [CypherApp.AppImage](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.AppImage) (any distro, no install) or
   [CypherApp.deb](https://github.com/reinthibaut/cypher-download/releases/latest/download/CypherApp.deb) (Ubuntu, Mint, Debian)
 
